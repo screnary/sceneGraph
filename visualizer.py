@@ -95,25 +95,32 @@ def visualize_scene_graph(graph, filename="scene_graph_map.html", center_coordin
     m = folium.Map(
         location=center, 
         zoom_start=zoom_start,
-        tiles='https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}',
-        attr='Esri, GEBCO, NOAA, National Geographic, DeLorme',
-        name='ESRI Ocean'
-    )
-    
-    # 添加其他地图图层选项
-    folium.TileLayer(
         tiles='OpenStreetMap',
         name='OpenStreetMap'
-    ).add_to(m)
+    )
+    
+    # m = folium.Map(
+    #     location=center, 
+    #     zoom_start=zoom_start,
+    #     tiles='https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}',
+    #     attr='Esri, GEBCO, NOAA, National Geographic, DeLorme',
+    #     name='ESRI Ocean'
+    # )
+
+    # # 添加其他地图图层选项
+    # folium.TileLayer(
+    #     tiles='OpenStreetMap',
+    #     name='OpenStreetMap'
+    # ).add_to(m)
 
     # ESRI 海洋参考层 (地名标签)
-    esri_ocean_ref = folium.TileLayer(
-        tiles='https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Reference/MapServer/tile/{z}/{y}/{x}',
-        attr='Esri, GEBCO, NOAA, National Geographic',
-        name='ESRI 海洋标签',
-        overlay=True
-    )
-    esri_ocean_ref.add_to(m)
+    # esri_ocean_ref = folium.TileLayer(
+    #     tiles='https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Reference/MapServer/tile/{z}/{y}/{x}',
+    #     attr='Esri, GEBCO, NOAA, National Geographic',
+    #     name='ESRI 海洋标签',
+    #     overlay=True
+    # )
+    # esri_ocean_ref.add_to(m)
 
     # 添加 OpenSeaMap 航海图层
     try:

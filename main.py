@@ -250,10 +250,10 @@ def run_example_2(debug=False):
                           center_coordinate="122.382, 25.765", filter_min_weight=0.01, draw_bounds=False,
                           trajectory_df=trajectory_df, animate=True, time_interval=500, ship_node_id="ship_001")
     
-    # using graph series from visualize_scene_graph, to visualize_dynamic_network
-    visualize_dynamic_network(graph_series, timestamps=timestamps, 
-                              filename="../results/trajectory_network_animation_{}.html".format(current_time), 
-                              filter_min_weight=0.01)
+    # # using graph series from visualize_scene_graph, to visualize_dynamic_network
+    # visualize_dynamic_network(graph_series, timestamps=timestamps, 
+    #                           filename="../results/trajectory_network_animation_{}.html".format(current_time), 
+    #                           filter_min_weight=0.01)
 
 
 if __name__ == "__main__":
